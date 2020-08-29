@@ -1,0 +1,80 @@
+.container{
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    /* grid-template-rows: repeat(2, 100px); */
+    grid-auto-rows: 120px;
+    grid-auto-flow: dense;
+}
+
+.original{
+
+}
+
+.vertical{
+   grid-row:  span 2;
+}
+
+.horizontal{
+   grid-column:  span 2;
+}
+
+.big{
+    grid-row:  span 2;
+    grid-column:  span 2;
+}
+
+.large{
+    grid-row:  span 3;
+    grid-column:  span 3; 
+}
+
+.vertical-large{
+    grid-row:  span 3;
+    grid-column:  span 2; 
+}
+
+.horizontal-large{
+    grid-row:  span 2;
+    grid-column:  span 3; 
+}
+
+.space{
+    grid-row:  span 4;
+    grid-column:  span 4; 
+}
+
+.space-vertical{
+    grid-row:  span 4;
+    grid-column:  span 3; 
+}
+
+.space-horizontal{
+    grid-row:  span 3;
+    grid-column:  span 4; 
+}
+
+.xl{
+    grid-row:  span 5;
+    grid-column:  span 5;  
+}
+
+.vertical-xl{
+    grid-row:  span 5;
+    grid-column:  span 3; 
+}
+
+.horizontal-xl{
+    grid-row:  span 3;
+    grid-column:  span 5; 
+}
+
+.xxl{
+    grid-row:  span 6;
+    grid-column:  span 6;  
+}
+
+.xxxl{
+    grid-row:  span 8;
+    grid-column:  span 8;  
+}

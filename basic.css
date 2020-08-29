@@ -1,0 +1,385 @@
+body,html{
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fdeca6;
+}
+
+.container{
+    font-size: 50px;
+    color: #fdeca6;
+    margin: 2rem;
+}
+
+.container > div{
+    text-align: center;
+}
+
+.container > div >img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-container{
+    cursor: pointer;
+}
+
+.img-container::before{
+  position: absolute;
+  z-index: 2;
+  display: none;
+  width: auto;
+  max-width: 10rem;
+  padding: 10px;
+  font-size: 0.3em;
+  /* line-height: 1.4em; */
+  border-radius: 5px;
+  background-color: rgba(57, 57, 57, 0.8);
+  color: white;
+  content: attr(value);
+  overflow-wrap: break-word;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.img-container:hover::before{
+    display: inline-block;
+}
+
+
+.img-container:hover .edit-icon-gallery {
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+.img-container:hover .delete-icon-gallery {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.edit-icon-gallery {
+    font-size: 1.4rem;
+    color: #fff;
+    position: relative;
+    bottom: 4.2rem;
+    left: -35%;
+    display: none;
+    margin: auto 4px auto ;
+}
+
+.delete-icon-gallery {
+    font-size: 1.4rem;
+    color: #fff;
+    position: relative;
+    bottom: 4.2rem;
+    left: -35%;
+    display: none;
+    margin: auto 4px auto ;
+
+}
+.edit-icon-gallery:hover{
+    color: chartreuse;
+}
+
+.delete-icon-gallery:hover{
+    color: red;
+}
+
+.gallery-list-holder{
+    background-color: aliceblue;
+    font-family: 'Ubuntu', sans-serif;
+    display: inline-block;
+    position: absolute;
+    border: 1px solid grey;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-container:hover .gallery-list-holder{
+    margin-top: -3.8rem;
+}
+
+
+.gallery-list-holder > a{
+    display: block;
+    padding: 10px;
+    border-radius: 1px;
+    text-decoration: none;
+}
+
+
+.gallery-list-holder > a:hover{
+    background-color: rgb(255, 166, 92);
+    color: white;
+    z-index: 1;
+}
+
+.add{
+    display: block;
+}
+
+
+#revert-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+#revert-btn{
+    padding:10px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: none;
+    font-size: 20px;
+    background-color: orangered;
+    color: whitesmoke;
+    border-style: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#revert-btn:hover{
+    z-index: 2;
+    background-color: rgb(255, 0, 64);
+    box-shadow: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#info-btn-container{
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    color: black;
+    background-color: beige;
+    border-radius: 10rem;
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+#info-box{
+    width: 20rem;
+    border: 2px solid grey;
+    overflow-wrap: break-word;
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+    background-color: black;
+    opacity: 0.9;
+    color: #fff;
+    border-radius: 10px;
+    padding: 0.8rem;
+    line-height: 1.5;
+}
+
+.open-info-box{
+  display: block;
+}
+
+.close-info-box{
+    display: none;
+}
+
+#info-btn-container:hover{
+    color: crimson;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#gallery-input-form{
+    display: flex;
+    justify-content: center;
+    margin: 30vh auto 20px;
+    border-radius: 5px;
+}
+
+
+#gallery-input-form > fieldset{
+    display: inline-block;
+    padding: 10px;
+    background-color: floralwhite;
+    color: indigo;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#gallery-input-form > fieldset >input{
+    margin: 10px;
+    padding: 5px;
+    width: 16rem;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
+
+#gallery-input-form > fieldset >input:focus{
+    background-color: rgb(235, 229, 255);
+}
+
+#gallery-input-form >fieldset > button{
+  font-size: 1rem;
+  box-shadow: none;
+  margin-left: 40%;
+  margin-top: 10px;
+  border: 1px sold;
+  background-color: darkblue;
+  color: white;
+  border-radius: 4px;
+  border-style: none;
+  padding: 5px 10px 5px;
+  font-weight: bold;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#gallery-input-form >fieldset > button:hover{
+    background-color: rgb(0, 30, 201);
+}
+
+
+.modal{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color: black;
+    justify-content: center;
+    align-content: center;
+}
+
+.slide{
+    display: flex;
+    height: 100%;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.no-slide{
+    display: none;
+}
+
+.modal-cross-icon{
+    color: rgb(207, 207, 207);
+    font-size: 4rem;
+    position: absolute;
+    right: 4rem;
+    top: 2rem;
+    cursor: pointer;
+}
+
+.modal-cross-icon:hover{
+    color: #fff;
+}
+
+.modal-controls{
+    color: rgb(207, 207, 207);
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.modal-prev-icon{
+    position: absolute;
+    left:2rem;
+    top: 50%;
+}
+
+.modal-prev-icon:hover{
+    color: #fff;
+}
+
+.modal-next-icon{
+    position: absolute;
+    right:2rem;
+    top: 50%;
+}
+
+.modal-next-icon:hover{
+    color: #fff;
+}
+
+.open-modal{
+    display: flex;
+}
+
+.close-modal{
+    display: none;
+}
+
+.modal-img-container{
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img-container > img{
+    height: 100%;
+    width: auto;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.modal-title-container{
+    color: #fff;
+    position: absolute;
+    top:5%;
+    /* right: 47%; */
+}
+
+@media only screen and (max-width: 1000px) {
+    .modal-img-container > img{
+        height: 80%;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .modal-img-container > img{
+        height: 60%;
+        width: auto;
+    }
+
+    .modal-controls{
+        font-size: 3rem;
+    }
+
+    .modal-cross-icon{
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-img-container > img{
+        height: 40%;
+        width: auto;
+    }
+
+    .modal-controls{
+        font-size: 2rem;
+    }
+
+    .modal-cross-icon{
+        font-size: 2rem;
+    }
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
